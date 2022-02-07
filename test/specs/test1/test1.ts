@@ -31,7 +31,7 @@ describe("Test Assignment: Test Automation", async () => {
         // let actualInfo = await firstItemCart.getInfoItems()
         // console.log("3.Verify order’s information and finalize.")         
         // assert.deepEqual(actualInfo, data.expected, "Verify order’s information")
-        await app.cart.clickfinish()                      
+        // await app.cart.clickfinish()                      
     });
     
 });

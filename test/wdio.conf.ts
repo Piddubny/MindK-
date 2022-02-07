@@ -1,6 +1,5 @@
 export const config: WebdriverIO.Config = {
-    hostname: undefined,
-    path: undefined,
+    
     //
     // ====================
     // Runner Configuration
@@ -310,15 +309,4 @@ export const config: WebdriverIO.Config = {
     */
     //onReload: function(oldSessionId, newSessionId) {
     //}
-}
-export const config = configToExport;
-
-if (process.env.CI == "true") {
-  console.log("==== RUNNING IN CI MODE ====");
-  configToExport.logLevel = "error";
-  configToExport.services = configToExport.services.filter(
-    (service) => service !== "chromedriver"
-  );
-  configToExport.hostname = "localhost";
-  configToExport.path = "/wd/hub";
 }

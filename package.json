@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "wdio run wdio.conf.js",
-        "test3": "npx wdio run test/wdio.conf.ts",
+        "test": "npx wdio run test/wdio.conf.ts",
+        "test3": "wdio run wdio.conf.js",        
         "test2": "wdio run wdio.conf.ts",
         "wdio": "wdio run wdio.conf.js"
     },

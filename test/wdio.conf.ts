@@ -311,3 +311,9 @@ export const config: WebdriverIO.Config = {
     //onReload: function(oldSessionId, newSessionId) {
     //}
 }
+if (process.env.CI == 'true') {
+    config.logLevel = 'error'
+    config.services = config.services.filter(service => service !== 'chromedriver')
+    config.hostname = 'localhost'
+    config.path = '/wd/hub'
+}

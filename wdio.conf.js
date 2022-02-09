@@ -273,7 +273,7 @@ exports.config = {
 }
 if (process.env.CI == 'true') {
     config.logLevel = 'error'
-    config.services = configToExport.services.filter(service => service !== 'chromedriver')
+    config.services = config.services.filter(service => service !== 'chromedriver')
     config.hostname = 'localhost'
     config.path = '/wd/hub'
 }

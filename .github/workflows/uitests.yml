@@ -26,6 +26,8 @@ jobs:
       with:
         node-version: 12.21.0
     - name: Run tests
+      env:
+        SELENIUM_HUB_HOST: 'localhost'
       run: npm cit  
     # - name: Compress results
     #   uses: montudor/action-zip@v0.1.0

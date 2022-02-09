@@ -21,19 +21,9 @@ jobs:
         selenoid-start-arguments: |
           --browsers 'chrome' --last-versions 1
     - uses: actions/checkout@v2
-    - name: Switch to Node.js 12.21.0
+    - name: Switch to Node.js 14.17.0
       uses: actions/setup-node@v1
       with:
-        node-version: 12.21.0
+        node-version: 14.17.0
     - name: Run tests
-      env:
-        SELENIUM_HUB_HOST: 'localhost'
       run: npm cit  
-    # - name: Compress results
-    #   uses: montudor/action-zip@v0.1.0
-    #   if: ${{ always() }}
-    #   with:
-    #     args: zip -qq -r ./allure-results.zip ./allure-results
-    # - name: Send Results and Generate Report
-    #   if: ${{ always() }}
-    #   run: node --unhandled-rejections=strict ./scripts/upload-generate-report.js

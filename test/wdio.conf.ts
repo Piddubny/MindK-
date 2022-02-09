@@ -311,10 +311,3 @@ export const config: WebdriverIO.Config = {
     //onReload: function(oldSessionId, newSessionId) {
     //}
 }
-if (process.env.SELENIUM_HUB_HOST) {
-    wdioConfig.hostname = process.env.SELENIUM_HUB_HOST
-    wdioConfig.port = 4444
-    wdioConfig.path = "/wd/hub"
-} else {
-    wdioConfig.services = ["chromedriver"];
-}

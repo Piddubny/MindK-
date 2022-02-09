@@ -272,9 +272,8 @@ exports.config = {
     //}
 }
 if (process.env.CI == 'true') {
-    configToExport.logLevel = 'error'
-    configToExport.services = configToExport.services.filter(service => service !== 'chromedriver')
-    configToExport.hostname = 'localhost'
-    configToExport.path = '/wd/hub'
+    config.logLevel = 'error'
+    config.services = configToExport.services.filter(service => service !== 'chromedriver')
+    config.hostname = 'localhost'
+    config.path = '/wd/hub'
 }
-export const config = configToExport

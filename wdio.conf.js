@@ -271,3 +271,9 @@ exports.config = {
     //onReload: function(oldSessionId, newSessionId) {
     //}
 }
+if (process.env.CI == 'true') {
+    configToExport.logLevel = 'error'
+    configToExport.services = configToExport.services.filter(service => service !== 'chromedriver')
+    configToExport.hostname = 'localhost'
+    configToExport.path = '/wd/hub'
+}

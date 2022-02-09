@@ -277,3 +277,4 @@ if (process.env.CI == 'true') {
     configToExport.hostname = 'localhost'
     configToExport.path = '/wd/hub'
 }
+export const config = configToExport
